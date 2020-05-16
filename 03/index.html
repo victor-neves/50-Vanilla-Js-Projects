@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Coin Game</title>
+</head>
+<body>
+    <div class="message"></div>
+    <button type="button">Heads</button>
+    <button type="button">Tails</button>
+    
+    <script>
+        const coinArray =["Heads","Tails"];
+        const message = document.querySelector(".message");
+       
+        
+        const buttons = document.querySelectorAll("button");
+        
+        
+        for(let i=0 ; i< buttons.length;i++){
+            buttons[i].addEventListener('click', tossCoin);
+        }
+        
+        function tossCoin(e){
+            console.log("Player: " + e.target.innerText);
+            let computerToss = Math.floor(Math.random()*2);
+            console.log("Computer: " + coinArray[computerToss]);
+            
+        }
+        
+       
+        
+    </script>
+</body>
+</html>
