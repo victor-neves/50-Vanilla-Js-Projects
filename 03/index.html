@@ -12,7 +12,7 @@
     <script>
         const coinArray =["Heads","Tails"];
         const message = document.querySelector(".message");
-       
+        let score = [0,0];
         
         const buttons = document.querySelectorAll("button");
         
@@ -22,10 +22,20 @@
         }
         
         function tossCoin(e){
-            console.log("Player: " + e.target.innerText);
-            let computerToss = Math.floor(Math.random()*2);
-            console.log("Computer: " + coinArray[computerToss]);
             
+            let playerGuess = e.target.innerText;
+            let computerToss = Math.floor(Math.random()*2);
+            let computerGuess = coinArray[computerToss];
+            let output;
+            if(playerGuess === computerGuess){
+                output = "Player Wins";
+                score[0]++;
+            }else{
+                output = "Computer Wins";
+                score[1]++;
+            }
+            
+            message.innerHTML = output +"<br><br>Player " + score[0] + "<br>Computer " + score[1];
         }
         
        
