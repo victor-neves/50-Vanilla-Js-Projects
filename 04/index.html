@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Rock,Paper,Scissor</title>
 </head>
 <body>
-    <div class="messageDiv"></div>
+   <div class="score"></div>
+    <div class="message"></div>
     <div>
         <button type="button" class="button1">Rock</button>
         <button type="button" class="button2">Paper</button>
@@ -14,20 +15,74 @@
     
     
     <script>
-        const button1 = document.querySelector('.button1');
+       const message = document.querySelector('.message');
+       const score = document.querySelector('.score');
+       const buttons = document.querySelectorAll("button");
+       let winner = [0,0];
         
-        let choice = ["Rock", "Paper", "Scissor"];
+       console.log(buttons);
         
-        function clk(){
-            
-            let message = "<h1>Message Test</h1>";
-            let messageDiv = document.querySelector('.messageDiv');
+       function playGame(e){
+           let playerSelection = e.target.innerHTML;
+           let computerSelection = Math.random();
+           if(computerSelection < 0.34){
+               computerSelection = "Rock";
+           }else if(computerSelection <= 0.67){
+               computerSelection = "Paper";
+           }else{
+               computerSelection = "Scissor";
+           }
+           let result = checkWinner(playerSelection,computerSelection);
+           console.log("Player Selection -->", playerSelection)
+           console.log("Computer Selection -->", computerSelection)
+           console.log(result);
            
-            messageDiv.innerHTML = message;
-        }
+           if(result == "Player Win"){
+               result += " -- wins! -- ";
+               winner[0]++;
+           }else if(result == "Computer Win"){
+               result += " -- wins! -- ";
+               winner[1]++;
+               
+           }
+           
+           score.innerHTML = `Player 1[${winner[0]}] --- Player 2 [${winner[1]}]`;
+       }
         
-       console.log(button1);
-        button1.addEventListener('click', clk);
+       function checkWinner(pl,co){
+           if(pl === co){
+               return 'Draw';
+           }
+           if(pl ===  'Rock'){
+               if(co === 'Paper'){
+                   return 'Computer Win'
+               }
+               else{
+                   return 'Player Win'
+               }    
+           }
+           if(pl ===  'Paper'){
+               if(co === 'Scissor'){
+                   return 'Computer Win'
+               }
+               else{
+                   return 'Player Win'
+               }      
+           }
+           if(pl ===  'Scissor'){
+               if(co === 'Rock'){
+                   return 'Computer Win'
+               }
+               else{
+                   return 'Player Win'
+               }    
+           }
+       }
+        
+       for(let i=0; i < buttons.length;i++){
+           buttons[i].addEventListener('click',playGame);
+       }
+        
         
     </script>
 </body>
