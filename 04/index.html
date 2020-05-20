@@ -47,8 +47,14 @@
            }
            
            score.innerHTML = `Player 1[${winner[0]}] --- Player 2 [${winner[1]}]`;
+           
+           messager(playerSelection + 'VS' + computerSelection +'<br><b>' + result + "</b>")
        }
         
+        
+       function messager(mes){
+           message.innerHTML = mes;
+       }
        function checkWinner(pl,co){
            if(pl === co){
                return 'Draw';
