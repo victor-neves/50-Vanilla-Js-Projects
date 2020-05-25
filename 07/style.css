@@ -1,0 +1,7 @@
+body{
+    background-color: #aaa;
+    font-family: 'Robot', sans-serif;
+    font-size: 14px;
+    line-height: 1.6em;
+    transition: 0.5s ease;
+}
