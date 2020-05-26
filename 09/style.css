@@ -1,9 +1,39 @@
+
+body{
+    background-color: #ffbd69;
+}
+
+.title{
+    color: #202040;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 30px;
+    font-family: Georgia;
+    border: 1px solid;
+}
+
 .animal{
-    width: 100px;
-    height: 50px;
+    width: 360px;
+    height: 300px;
     color: black;
     text-align: center;
-    border: 1px solid black;
+    border: 10px solid #543864;
     display: inline-block;
-    margin: 15px;
+    margin: auto 30px;
+    margin-top: 50px;
+    background-color: aliceblue;
+}
+
+img{
+    max-width: 80%;
+    height: 120px;
+    margin: 60px auto;
+}
+
+p{
+    color: #202040;
+    text-align: center;
+    font-family: cursive;
+    font-size: 30px;
+    margin-bottom: 0px;
 }

@@ -8,10 +8,25 @@
 </head>
 <body>
    
-    
-    <div class="animal lion">Lion</div>
-    <div class="animal cougar">Cougar</div>
-    <div class="animal Wolf">Wolf</div>
+    <div class="title"><h1>Animals Sounds</h1></div>
+    <div class="animal lion">
+        <p>Lion</p>
+        <div class="image">
+            <img src="./img/lionImage.jpg" alt="">
+        </div>
+    </div>
+    <div class="animal cougar">
+        <p>Cougar</p>
+         <div class="image">
+            <img src="./img/cougarImage.jpg" alt="">
+        </div>
+    </div>
+    <div class="animal Wolf">
+        <p>Wolf</p>
+         <div class="image">
+            <img src="./img/wolfImage.jpg" alt="">
+        </div>
+    </div>
     <script>
         
         const animals = document.querySelectorAll('.animal');
@@ -34,15 +49,15 @@
             console.log("Now is playing --> " + name);
             switch(name){
                 case "lion":
-                    let sound1 = new Audio("./Music/129-victory.mp3");
+                    let sound1 = new Audio("./Music/lion.wav");
                     sound1.play()
                     break
                 case "cougar":
-                     let sound2 = new Audio("./Music/134-casino.mp3");
+                     let sound2 = new Audio("./Music/cougar.wav");
                     sound2.play() 
                     break
                 case "wolf":
-                    let sound3 = new Audio("./Music/138-ocean.mp3");
+                    let sound3 = new Audio("./Music/wolf.wav");
                     sound3.play()
                     break
                 default:
