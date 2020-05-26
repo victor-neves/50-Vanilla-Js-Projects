@@ -1,0 +1,30 @@
+body{
+    margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    box-sizing: border-box;
+}
+
+
+
+.one{
+    height: 300px;
+    background-color: dodgerblue;
+    display: block;
+    
+}
+
+
+
+.two{
+    height: 300px;
+    background-color: lightcoral;
+}
+
+.three{
+    height: 300px;
+    background-color: lightgreen;
+}
