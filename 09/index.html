@@ -36,10 +36,10 @@
             
             console.log(animals[i])
             animals[i].addEventListener('click', function(){
-                  let animal = this.innerHTML;
+                  let animal = this.querySelector('p').innerHTML;
                   let lowerAnimal = animal.toLowerCase();
                   console.log(lowerAnimal);
-                 makeSound(lowerAnimal);
+                  makeSound(lowerAnimal);
             })
             
             
